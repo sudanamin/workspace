@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/list_selector"
+    android:orientation="horizontal"
+    android:padding="5dip" >
+    
+ 
+    <!-- Title Of Song-->
+    <TextView
+        android:id="@+id/name_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       	android:layout_below="@+id/image"
+       	android:layout_centerInParent="true"
+        android:text="Rihanna Love the way lie"
+        android:textColor="#040404"
+        android:typeface="sans"
+        android:textSize="20dip"
+        android:textStyle="bold"/>
+ 
+    <!-- Artist Name -->
+    <TextView
+        android:id="@+id/email_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name_label"
+        android:layout_centerInParent="true"
+        android:textColor="#343434"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:text="Just gona stand there and ..." />
+ 
+    <!-- Rightend Duration -->
+    <TextView
+        android:id="@+id/mobile_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/email_label"
+        android:layout_centerInParent="true"
+        android:text="Offer"
+        android:textSize="15dip"
+        android:textColor="#4CC417"
+        android:textStyle="bold"/>
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="150dip"
+        android:layout_height="150dip"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="116dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/contact" />
+ 
+</RelativeLayout>
