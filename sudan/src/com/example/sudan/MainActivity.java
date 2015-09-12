@@ -62,7 +62,7 @@ public class MainActivity extends ActionBarActivity {
 		tabs.setSelectedIndicatorColors(getResources().getColor(
 				R.color.indicator));
 		
-	//	tabs.setDividerColors(Color.WHITE);
+		tabs.setDividerColors(getResources().getColor(R.color.white));
 		tabs.setBackgroundColor(getResources().getColor(R.color.aminbackground));
 	//	tabs.setDividerColors(getResources().getColor(
 		//		R.color.Dividercolor));

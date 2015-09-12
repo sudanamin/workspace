@@ -2,6 +2,7 @@ package com.example.sudan;
 
 import android.R;
 import android.R.color;
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -19,9 +20,9 @@ class SlidingTabStrip extends LinearLayout {
   private static final int SELECTED_INDICATOR_THICKNESS_DIPS = 7;
   private static final int DEFAULT_SELECTED_INDICATOR_COLOR = 0xFFea3602;
 
-  private static final int DEFAULT_DIVIDER_THICKNESS_DIPS = 3;
-  private static final byte DEFAULT_DIVIDER_COLOR_ALPHA = 22;
-  private static final float DEFAULT_DIVIDER_HEIGHT = 0.9f;
+  private static final int DEFAULT_DIVIDER_THICKNESS_DIPS = 1;
+  private static final byte DEFAULT_DIVIDER_COLOR_ALPHA = 125;
+  private static final float DEFAULT_DIVIDER_HEIGHT = 0.5f;
 
   private final int mBottomBorderThickness;
   private final Paint mBottomBorderPaint;
@@ -100,7 +101,8 @@ class SlidingTabStrip extends LinearLayout {
     invalidate();
   }
 
-  @Override
+  @SuppressLint("ResourceAsColor")
+@Override
   protected void onDraw(Canvas canvas) {
     final int height = getHeight();
    // this.setHe
@@ -142,12 +144,12 @@ class SlidingTabStrip extends LinearLayout {
     canvas.drawRect(0, height - mBottomBorderThickness, getWidth(), height, mBottomBorderPaint);
 
     // Vertical separators between the titles
-    mDefaultTabColorizer.setDividerColors(color.white);
+   // mDefaultTabColorizer.setDividerColors(color.white);
     int separatorTop = (height - dividerHeightPx) / 2;
     for (int i = 0; i < childCount - 1; i++) {
       View child = getChildAt(i);
-      //mDividerPaint.setColor(tabColorizer.getDividerColor(i));
-      mDividerPaint.setColor(color.white);
+      mDividerPaint.setColor(tabColorizer.getDividerColor(i));
+    //  mDividerPaint.setColor(getResources().getColor(R.color.white));
       canvas.drawLine(child     .getRight(), separatorTop, child.getRight(),
           separatorTop + dividerHeightPx, mDividerPaint);
     }
