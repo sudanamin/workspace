@@ -30,6 +30,10 @@
     android:name=".FullScreenViewActivity" 
     android:label="@string/activity_name">
 </activity>
+ <activity 
+    android:name=".products" 
+    android:label="@string/activity_name">
+</activity>
     </application>
 
 </manifest>

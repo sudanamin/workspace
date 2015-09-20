@@ -45,7 +45,7 @@ public class LazyListview extends Fragment {
 	static InputStream is = null;
 	static JSONObject jObj = null;
 	static String json = "";
-	private static String jsonurl = "http://sudan.besaba.com/ima.txt";
+	private static String jsonurl = "http://sudan.besaba.com/brandsjson.txt";
 	//private static String jsonurl = "http://sudan.besaba.com/images.txt";
     LazyAdapter adapter;
     GridView gridView;
@@ -68,9 +68,11 @@ public class LazyListview extends Fragment {
        
         
         gridView = (GridView)v.findViewById(R.id.gridview);
+        String arrofjson = "brands";
         
-        
-        new GetData().execute(jsonurl);
+        GetData getdata = new GetData(gridView, adapter , getActivity(),arrofjson);
+       // new GetData().execute(jsonurl);
+        getdata.execute(jsonurl);
         
        // gridView = (GridView)findViewById(R.id.gridview);
         
@@ -95,8 +97,8 @@ public class LazyListview extends Fragment {
         super.onDestroy();
     }
      
-
-/*@Override
+/*
+@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.lazy_listview, menu);
@@ -106,133 +108,133 @@ public class LazyListview extends Fragment {
 
 
 
-private class GetData extends AsyncTask<String, Void, JSONObject> {
+   /* private class GetData extends AsyncTask<String, Void, JSONObject> {
 
-    @Override
-    protected void onPreExecute() {
-        super.onPreExecute();
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
 
-     
+         
 
-    }
-
-    @Override
-    protected JSONObject doInBackground(String...  params) {
-
-
-         String urll = params[0];
-    	// Making HTTP request
-    	try {
-    		// defaultHttpClient
-    		DefaultHttpClient httpClient = new DefaultHttpClient();
-    		HttpPost httpPost = new HttpPost(urll);
-
-    		HttpResponse httpResponse = httpClient.execute(httpPost);
-    		HttpEntity httpEntity = httpResponse.getEntity();
-    		is = httpEntity.getContent();			
-
-    	} catch (UnsupportedEncodingException e) {
-    		e.printStackTrace();
-    	} catch (ClientProtocolException e) {
-    		e.printStackTrace();
-    	} catch (IOException e) {
-    		e.printStackTrace();
-    	}
-    	
-    	try {
-    		BufferedReader reader = new BufferedReader(new InputStreamReader(
-    				is, "iso-8859-1"), 8);
-    		StringBuilder sb = new StringBuilder();
-    		String line = null;
-    		while ((line = reader.readLine()) != null) {
-    			sb.append(line + "\n");
-    		}
-    		is.close();
-    		json = sb.toString();
-    	} catch (Exception e) {
-    		Log.e("Buffer Error", "Error converting result " + e.toString());
-    	}
-
-    	// try parse the string to a JSON object
-    	try {
-    		jObj = new JSONObject(json);
-    	} catch (JSONException e) {
-    		Log.e("JSON Parser", "Error parsing data " + e.toString());
-    	}
-
-    	// return JSON String
-    	return jObj;
-
-    }
-    
-
-    @Override
-    protected void onPostExecute(JSONObject result) 
-    {
-        super.onPostExecute(result);
-        
-      //  JSONParser jParser = new JSONParser();
-
-		// getting JSON string from URL
-		//JSONObject json = result;
-        
-
-		try {
-			// Getting Array of Contacts
-			images = result.getJSONArray(TAG_IMAGES);
-			names= new String[images.length()];
-			 urls= new String[images.length()];
-			
-			// looping through All Contacts
-			for(int i = 0; i < images.length(); i++){
-				
-				
-				 
-				
-				JSONObject c = images.getJSONObject(i);
-				
-				// Storing each json item in variable
-			    
-				String name = c.getString(TAG_NAME);
-				names[i]= name;
-				
-				String url = c.getString(TAG_url);
-				urls[i]= url;
-				System.out.println("I am here url "+ url);
-				
-				// Phone number is agin JSON Object
-			/*	JSONObject phone = c.getJSONObject(TAG_PHONE);
-				String mobile = phone.getString(TAG_PHONE_MOBILE);
-				String home = phone.getString(TAG_PHONE_HOME);
-				String office = phone.getString(TAG_PHONE_OFFICE);*/
-				
-				// creating new HashMap
-			//	HashMap<String, String> map = new HashMap<String, String>();
-				
-				// adding each child node to HashMap key => value
-			
-	//			map.put(TAG_NAME, name);
-	//			map.put(TAG_url, url);
-				
-
-				// adding HashList to ArrayList
-				
-			}
-		} catch (JSONException e) {
-			e.printStackTrace();
-		}
-		
-        
-        
-        adapter=new LazyAdapter( getActivity(), urls,names);
-        gridView.setAdapter(adapter);
-
-        
-
-       
         }
-  
-}
+
+        @Override
+        protected JSONObject doInBackground(String...  params) {
+
+
+             String urll = params[0];
+        	// Making HTTP request
+        	try {
+        		// defaultHttpClient
+        		DefaultHttpClient httpClient = new DefaultHttpClient();
+        		HttpPost httpPost = new HttpPost(urll);
+
+        		HttpResponse httpResponse = httpClient.execute(httpPost);
+        		HttpEntity httpEntity = httpResponse.getEntity();
+        		is = httpEntity.getContent();			
+
+        	} catch (UnsupportedEncodingException e) {
+        		e.printStackTrace();
+        	} catch (ClientProtocolException e) {
+        		e.printStackTrace();
+        	} catch (IOException e) {
+        		e.printStackTrace();
+        	}
+        	
+        	try {
+        		BufferedReader reader = new BufferedReader(new InputStreamReader(
+        				is, "iso-8859-1"), 8);
+        		StringBuilder sb = new StringBuilder();
+        		String line = null;
+        		while ((line = reader.readLine()) != null) {
+        			sb.append(line + "\n");
+        		}
+        		is.close();
+        		json = sb.toString();
+        	} catch (Exception e) {
+        		Log.e("Buffer Error", "Error converting result " + e.toString());
+        	}
+
+        	// try parse the string to a JSON object
+        	try {
+        		jObj = new JSONObject(json);
+        	} catch (JSONException e) {
+        		Log.e("JSON Parser", "Error parsing data " + e.toString());
+        	}
+
+        	// return JSON String
+        	return jObj;
+
+        }
+        
+
+        @Override
+        protected void onPostExecute(JSONObject result) 
+        {
+            super.onPostExecute(result);
+            
+          //  JSONParser jParser = new JSONParser();
+
+    		// getting JSON string from URL
+    		//JSONObject json = result;
+            
+
+    		try {
+    			// Getting Array of Contacts
+    			images = result.getJSONArray(TAG_IMAGES);
+    			names= new String[images.length()];
+    			 urls= new String[images.length()];
+    			
+    			// looping through All Contacts
+    			for(int i = 0; i < images.length(); i++){
+    				
+    				
+    				 
+    				
+    				JSONObject c = images.getJSONObject(i);
+    				
+    				// Storing each json item in variable
+    			    
+    				String name = c.getString(TAG_NAME);
+    				names[i]= name;
+    				
+    				String url = c.getString(TAG_url);
+    				urls[i]= url;
+    				System.out.println("I am here url "+ url);
+    				
+    				// Phone number is agin JSON Object
+    			/*	JSONObject phone = c.getJSONObject(TAG_PHONE);
+    				String mobile = phone.getString(TAG_PHONE_MOBILE);
+    				String home = phone.getString(TAG_PHONE_HOME);
+    				String office = phone.getString(TAG_PHONE_OFFICE);*/
+    				
+    				// creating new HashMap
+    			//	HashMap<String, String> map = new HashMap<String, String>();
+    				
+    				// adding each child node to HashMap key => value
+    			
+    	//			map.put(TAG_NAME, name);
+    	//			map.put(TAG_url, url);
+    				
+
+    				// adding HashList to ArrayList
+    				
+    /*			}
+    		} catch (JSONException e) {
+    			e.printStackTrace();
+    		}
+    		
+            
+            
+            adapter=new LazyAdapter( getActivity(), urls,names);
+            gridView.setAdapter(adapter);
+
+            
+
+           
+            }
+      
+    }*/
 
 }
 

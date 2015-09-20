@@ -106,10 +106,10 @@ public class LazyAdapter extends BaseAdapter {
 		public void onClick(View v) {
 			// on selecting grid view image
 			// launch full screen activity
-			Intent i = new Intent(activity, FullScreenViewActivity.class);
-			i.putExtra("position", _postion);
+			Intent i = new Intent(activity, products.class);
+		//	i.putExtra("position", _postion);
 			Log.e("posiojjjjjjjjjjtin is ", "  "  +_postion);
-			i.putExtra("images", data);
+		//	i.putExtra("images", data);
 			activity.startActivity(i);
 		}
 

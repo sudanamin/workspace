@@ -1,0 +1,14 @@
+package asdf;
+
+public class test {
+	
+	public static void main(String arg[]){
+		
+		String s="45";
+		int i = Integer.parseInt(s);
+		i++;
+		System.out.println(i);
+		
+	}
+	
+}

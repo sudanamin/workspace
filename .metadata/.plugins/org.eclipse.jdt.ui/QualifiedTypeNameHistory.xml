@@ -7,4 +7,5 @@
 <fullyQualifiedTypeName name="android.support.annotation.Nullable"/>
 <fullyQualifiedTypeName name="com.example.sudan.LazyAdapter"/>
 <fullyQualifiedTypeName name="android.util.Log"/>
+<fullyQualifiedTypeName name="android.app.Activity"/>
 </qualifiedTypeNameHistroy>
