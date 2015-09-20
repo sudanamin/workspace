@@ -78,8 +78,6 @@ public class products extends Activity {
         Intent i = getIntent();
 		String  bid = i.getStringExtra("brand_id");
 		int brand_id = Integer.parseInt(bid);
-		
-		Log.e("brand id is ", ""+brand_id);
         
      
         GetData getdata = new GetData(gridView, adapter , this,TAG_IMAGES);

@@ -37,15 +37,11 @@ public  class GetData extends AsyncTask<String, Void, JSONObject> {
 	Activity activity;
 	//Integer[] images;
 	String names[];
-	String ids[];
 	String urls[];
 	String imageUrls[];
 	 String TAG_IMAGES ;
 	private static final String TAG_NAME = "name";
 	private static final String TAG_url = "url";
-	private static final String TAG_ID = "id";
-	
-	
 	JSONArray images = null;
 	
 	public GetData(GridView gridView,LazyAdapter adapter, Activity activity ,String arrofjson){
@@ -133,8 +129,6 @@ public  class GetData extends AsyncTask<String, Void, JSONObject> {
 			images = result.getJSONArray(TAG_IMAGES);
 			names= new String[images.length()];
 			 urls= new String[images.length()];
-			 ids = new String[images.length()];
-			 
 			
 			// looping through All Contacts
 			for(int i = 0; i < images.length(); i++){
@@ -145,8 +139,7 @@ public  class GetData extends AsyncTask<String, Void, JSONObject> {
 				JSONObject c = images.getJSONObject(i);
 				
 				// Storing each json item in variable
-				String id= c.getString(TAG_ID);
-				ids[i]= id;
+				String id = c.getString("id");
 			    
 				String name = c.getString(TAG_NAME);
 				names[i]= name;
@@ -154,15 +147,8 @@ public  class GetData extends AsyncTask<String, Void, JSONObject> {
 				String url = c.getString(TAG_url);
 				urls[i]= url;
 				
-				
-				
-				
-				
-				
-				
-				
 				String title = c.getString("title");
-				System.out.println("I am here brandid  "+ url);
+				System.out.println("I am here url "+ url);
 				
 				// Phone number is agin JSON Object
 			/*	JSONObject phone = c.getJSONObject(TAG_PHONE);
@@ -188,7 +174,7 @@ public  class GetData extends AsyncTask<String, Void, JSONObject> {
 		
         
         
-        adapter=new LazyAdapter( this.activity, urls,names,ids);
+        adapter=new LazyAdapter( this.activity, urls,names);
         gridView.setAdapter(adapter);
 
         

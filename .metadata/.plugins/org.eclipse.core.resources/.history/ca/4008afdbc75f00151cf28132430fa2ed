@@ -27,16 +27,14 @@ public class LazyAdapter extends BaseAdapter {
      
     private Activity activity;
     private String[] data;
-    private String[] ids;
     private String[] items_name;
     private static LayoutInflater inflater=null;
    // public ImageLoader imageLoader;
      
-    public LazyAdapter(Activity a, String[] d,String[] catg_name,String [] id) {
+    public LazyAdapter(Activity a, String[] d,String[] catg_name) {
         activity = a;
         
         data=d;
-        ids = id;
         items_name = catg_name;
         
         
@@ -96,11 +94,11 @@ public class LazyAdapter extends BaseAdapter {
     }
     class OnImageClickListener implements OnClickListener {
 
-		int _postion ;
+		String _postion ;
 
 		// constructor
 		public OnImageClickListener(int position) {
-			this._postion  = position;
+			this._postion  = ""+position;
 			 
 		}
 
@@ -112,7 +110,6 @@ public class LazyAdapter extends BaseAdapter {
 		//	i.putExtra("position", _postion);
 			Log.e("posiojjjjjjjjjjtin is ", "  "  +_postion);
 		//	i.putExtra("images", data);
-			i.putExtra("brand_id", ids[_postion]);
 			activity.startActivity(i);
 		}
 

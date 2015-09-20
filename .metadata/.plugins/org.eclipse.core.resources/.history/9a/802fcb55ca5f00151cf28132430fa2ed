@@ -162,7 +162,7 @@ public  class GetData extends AsyncTask<String, Void, JSONObject> {
 				
 				
 				String title = c.getString("title");
-				System.out.println("I am here brandid  "+ url);
+				System.out.println("I am here url "+ url);
 				
 				// Phone number is agin JSON Object
 			/*	JSONObject phone = c.getJSONObject(TAG_PHONE);
