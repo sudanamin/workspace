@@ -82,8 +82,10 @@ public class LazyAdapter extends BaseAdapter {
 
       //  picture.setImageResource(item.drawableId);
         name.setText(items_name[position]);
-
-       
+        
+        
+        String ccurrent_activity = activity.getLocalClassName();
+        Log.e("activity iiiiiiiii is ", " i am hereeeeeeee "  +ccurrent_activity);
         
         Glide.with(activity.getApplicationContext())
 		   .load(data[position])
@@ -108,12 +110,30 @@ public class LazyAdapter extends BaseAdapter {
 		public void onClick(View v) {
 			// on selecting grid view image
 			// launch full screen activity
-			Intent i = new Intent(activity, products.class);
-		//	i.putExtra("position", _postion);
-			Log.e("posiojjjjjjjjjjtin is ", "  "  +_postion);
-		//	i.putExtra("images", data);
-			i.putExtra("brand_id", ids[_postion]);
-			activity.startActivity(i);
+			
+			String current_activity = activity.getLocalClassName();
+			String MainActivity = "MainActivity";
+			String productactivity = "products";
+			Intent i ;
+			if (current_activity.equals(MainActivity)){
+			//if (true){
+				   i = new Intent(activity, products.class); 
+	        	//	i.putExtra("position", _postion);
+	    		Log.e("activity iiiiiiiii is ", " i am comming from "  +current_activity);
+	         	//	i.putExtra("images", data);
+	     		i.putExtra("brand_id", ids[_postion]);
+	     		activity.startActivity(i);
+			}
+			if (current_activity.equals(productactivity)){
+				   i = new Intent(activity, details.class);
+		        	//	i.putExtra("position", _postion);
+		    		Log.e("activity iiiiiiiii is ", " i am comming from "  +current_activity);
+		         	//	i.putExtra("images", data);
+		     		i.putExtra("product_id", ids[_postion]);
+		     		activity.startActivity(i);
+			}			  
+			
+			
 		}
 
 	}

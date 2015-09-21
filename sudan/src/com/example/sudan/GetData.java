@@ -26,7 +26,7 @@ public  class GetData extends AsyncTask<String, Void, JSONObject> {
     static InputStream is = null;
 	static JSONObject jObj = null;
 	static String json = "";
-	private static String jsonurl = "http://sudan.besaba.com/brandsjson.txt";
+	//private static String jsonurl = "http://sudan.besaba.com/brandsjson.txt";
 	//private static String jsonurl = "http://sudan.besaba.com/images.txt";
     LazyAdapter adapter;
     GridView gridView;
@@ -161,7 +161,7 @@ public  class GetData extends AsyncTask<String, Void, JSONObject> {
 				
 				
 				
-				String title = c.getString("title");
+			//	String title = c.getString("title");
 				System.out.println("I am here brandid  "+ url);
 				
 				// Phone number is agin JSON Object
