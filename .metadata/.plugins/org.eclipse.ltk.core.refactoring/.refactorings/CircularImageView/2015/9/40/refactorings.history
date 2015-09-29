@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;CircularImageView.java&apos; to &apos;sudan/src/com.example.sudan&apos;&#x0D;&#x0A;- Original project: &apos;CircularImageView&apos;&#x0D;&#x0A;- Destination element: &apos;sudan/src/com.example.sudan&apos;&#x0D;&#x0A;- Original element: &apos;com.mikhaellopez.circularimageview.CircularImageView.java&apos;" description="Copy compilation unit" destination="=sudan/src&lt;com.example.sudan" element1="/src&lt;com.mikhaellopez.circularimageview{CircularImageView.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1443464584312" units="1" version="1.0"/>
+</session>
