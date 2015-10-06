@@ -1,18 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="android.app.Fragment"/>
-<fullyQualifiedTypeName name="android.view.View"/>
 <fullyQualifiedTypeName name="android.view.ViewGroup"/>
-<fullyQualifiedTypeName name="android.view.LayoutInflater"/>
 <fullyQualifiedTypeName name="android.support.annotation.Nullable"/>
 <fullyQualifiedTypeName name="com.example.sudan.LazyAdapter"/>
 <fullyQualifiedTypeName name="android.app.Activity"/>
 <fullyQualifiedTypeName name="android.util.Log"/>
 <fullyQualifiedTypeName name="android.widget.TextView"/>
 <fullyQualifiedTypeName name="android.view.Display"/>
+<fullyQualifiedTypeName name="android.content.DialogInterface.OnClickListener"/>
+<fullyQualifiedTypeName name="android.transition.Transition"/>
+<fullyQualifiedTypeName name="android.graphics.Canvas"/>
+<fullyQualifiedTypeName name="android.graphics.Paint"/>
+<fullyQualifiedTypeName name="android.graphics.Rect"/>
+<fullyQualifiedTypeName name="com.bumptech.glide.request.target.BitmapImageViewTarget"/>
+<fullyQualifiedTypeName name="android.support.v4.graphics.drawable.RoundedBitmapDrawable"/>
+<fullyQualifiedTypeName name="android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory"/>
+<fullyQualifiedTypeName name="com.mikhaellopez.circularimageview.CircularImageView"/>
+<fullyQualifiedTypeName name="android.widget.RelativeLayout"/>
+<fullyQualifiedTypeName name="com.example.horizontalimage.R.id"/>
+<fullyQualifiedTypeName name="com.bumptech.glide.Glide"/>
+<fullyQualifiedTypeName name="android.view.View"/>
 <fullyQualifiedTypeName name="android.content.Context"/>
+<fullyQualifiedTypeName name="android.view.LayoutInflater"/>
+<fullyQualifiedTypeName name="android.graphics.Bitmap"/>
+<fullyQualifiedTypeName name="com.squareup.picasso.Picasso"/>
 <fullyQualifiedTypeName name="android.R.layout"/>
 <fullyQualifiedTypeName name="android.R"/>
-<fullyQualifiedTypeName name="android.content.DialogInterface.OnClickListener"/>
-<fullyQualifiedTypeName name="com.mikhaellopez.circularimageview.CircularImageView"/>
+<fullyQualifiedTypeName name="android.R.id"/>
+<fullyQualifiedTypeName name="de.hdodenhof.circleimageview.sample.R.color"/>
 </qualifiedTypeNameHistroy>

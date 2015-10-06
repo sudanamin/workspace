@@ -3,6 +3,7 @@ package com.example.sudan;
 import com.bumptech.glide.Glide;
 //import info.androidhive.imageslider.R;
 import com.example.sudan.TouchImageView;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -61,7 +62,7 @@ public class FullScreenImageAdapter extends PagerAdapter {
         options.inPreferredConfig = Bitmap.Config.ARGB_8888;
         Bitmap bitmap = BitmapFactory.decodeFile(_imagePaths.get(position), options);
         imgDisplay.setImageBitmap(bitmap);*/
-        Glide.with(_activity.getApplicationContext())
+        Picasso.with(_activity.getApplicationContext())
 		   .load(_images[position])
 		   .into(imgDisplay);
         // close button click event

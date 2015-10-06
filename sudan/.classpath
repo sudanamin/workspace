@@ -6,5 +6,6 @@
 	<classpathentry kind="lib" path="libs/glide-3.6.1.jar"/>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="gen"/>
+	<classpathentry kind="lib" path="C:/Users/Aminov/Desktop/picasso-2.5.2.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>
