@@ -8,8 +8,8 @@
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="  "/>
 			<item value=" "/>
+			<item value="  "/>
 		</list>
 		<list key="replacehistory">
 			<item value=""/>
