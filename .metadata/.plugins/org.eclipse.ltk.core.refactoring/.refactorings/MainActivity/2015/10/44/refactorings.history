@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;rounded_corner.xml&apos; to &apos;drawable&apos;&#x0D;&#x0A;- Original project: &apos;MainActivity&apos;&#x0D;&#x0A;- Destination element: &apos;drawable&apos;&#x0D;&#x0A;- Original element: &apos;rounded_corner.xml&apos;" description="Copy file" element1="res/drawable-nodpi/rounded_corner.xml" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1445794979429" target="/sudan/res/drawable" units="0" version="1.0"/>
+</session>

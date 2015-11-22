@@ -61,7 +61,7 @@ public class details extends Activity {
 	// import com.rogcg.gridviewexample.R;
 
 	// public class LazyListview extends Fragment {
-
+	protected static final String TAG = "amin!";
 	static InputStream is = null;
 	static JSONObject jObj = null;
 	static String json = "";
@@ -360,6 +360,7 @@ public class details extends Activity {
 
 		}
 
+		@SuppressLint("NewApi")
 		@Override
 		protected void onPostExecute(JSONObject result) {
 			super.onPostExecute(result);
@@ -422,16 +423,25 @@ public class details extends Activity {
 				// imageView.setBorderColor(27);
 				// imageView.addShadow();
 				//imageView.setScaleType(ScaleType.FIT_CENTER);
+				final int sdk = android.os.Build.VERSION.SDK_INT;
+				if(sdk < android.os.Build.VERSION_CODES.JELLY_BEAN) {
+					also_layou.setBackgroundDrawable( getResources().getDrawable(R.drawable.rounded_corner) );
+				} else {
+					also_layou.setBackground(getResources().getDrawable(R.drawable.rounded_corner));
+				}
 				imageView.setId(ii);
 				Display display = getWindowManager().getDefaultDisplay();
 				// ImageView iv = (LinearLayout) findViewById(R.id.left);
-				int width = display.getWidth() * 40 / 100; // ((display.getWidth()*20)/100)
-				int height = display.getHeight() * 30 / 100;// ((display.getHeight()*30)/100)
+				int width = display.getWidth() * 25 / 100; // ((display.getWidth()*20)/100)
+				int height = display.getHeight() * 15 / 100;// ((display.getHeight()*30)/100)
 				LinearLayout.LayoutParams parms = new LinearLayout.LayoutParams(width, height);
+				//parms.leftMargin = 10;
 				parms.leftMargin = 10;
-			
-				
+			   // String TAG;
+				Log.d(TAG, "width =:  "+width+"  ,hewght=:"+height);
+				parms.setMargins(width /15, width /10, width/15, width/40);
 				imageView.setBorderWidth(3);
+				
 				imageView.setBorderColor(R.color.aminindicator);
 				//int f = 0xff70D517;
 				//imageView.setBorderColor(f);
@@ -482,14 +492,15 @@ public class details extends Activity {
 		public void onClick(View v) {
 			// on selecting grid view image
 			// launch full screen activity
-			if (Integer.parseInt(_postion) <10){
+			if (Integer.parseInt(_postion) <10){// to chacke if you came from images details or you might also like
 			Intent i = new Intent(details.this, FullScreenViewActivity.class);
 			i.putExtra("position", _postion);
 			Log.e("posiojjjjjjjjjjtin is ", "" + _postion);
 			i.putExtra("images", urls);
 			details.this.startActivity(i);
 			}
-			else {}
+			else // you came from you might also like
+			{}
 		}
 
 	}

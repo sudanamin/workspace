@@ -6,13 +6,10 @@
         <item name="colorPrimary">@color/ColorPrimary</item>
         <item name="colorPrimaryDark">@color/ColorPrimaryDark</item>
         
-     
+    
   
 
 
-     
-    <item name="android:windowActionBar">false</item>
-    <item name="android:windowNoTitle">true</item>
 
         
       

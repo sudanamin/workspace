@@ -72,8 +72,8 @@ public class SlidingTabLayout extends HorizontalScrollView {
 
   }
 
-  private static final int TITLE_OFFSET_DIPS = 24;
-  private static final int TAB_VIEW_PADDING_DIPS = 14;
+  private static final int TITLE_OFFSET_DIPS = 45;
+  private static final int TAB_VIEW_PADDING_DIPS = 16;
   private static final int TAB_VIEW_TEXT_SIZE_SP = 12;
 
   private int mTitleOffset;
@@ -185,8 +185,13 @@ private boolean mDistributeEvenly;
     TextView textView = new TextView(context);
     textView.setGravity(Gravity.CENTER);
     textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, TAB_VIEW_TEXT_SIZE_SP);
-    textView.setTypeface(Typeface.SANS_SERIF);
+   // textView.setTypeface(Typeface.SANS_SERIF);
+    Typeface typeface = Typeface.createFromAsset(context.getAssets(), "Lato-Regular.ttf");
+  //  textView.setTypeface(typeface );
+   // textView.setTypeface(textView.getTypeface(), Typeface.BOLD);
+    textView.setTypeface(typeface,Typeface.BOLD );
     ///////
+    
    WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
     Display display = wm.getDefaultDisplay();
     Point size = new Point();
@@ -259,7 +264,7 @@ private void populateTabStrip() {
       
       tabTitleView.setTextColor(getResources().getColor(R.color.tabsScrollColor));
       tabTitleView.setText(adapter.getPageTitle(i));
-      tabTitleView.setTextSize(11);
+      tabTitleView.setTextSize(TAB_VIEW_TEXT_SIZE_SP);
       tabView.setOnClickListener(tabClickListener);
       
       

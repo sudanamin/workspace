@@ -5,10 +5,14 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
 import android.annotation.SuppressLint;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.text.Html;
+import android.text.Spanned;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 /**
  * Created by Edwin on 15/02/2015.
@@ -23,7 +27,7 @@ public class MainActivity extends ActionBarActivity {
 	ViewPager pager;
 	ViewPagerAdapter adapter;
 	SlidingTabLayout tabs;
-	CharSequence Titles[] = { "       Home       ", "         Events      ", "        Montana      ", "         Alhilal " };
+	CharSequence Titles[] = { "Home ", " Events ", " Montana ", " Alhilal " };
 	int Numboftabs = 4;
 
 	//@SuppressLint("NewApi")
@@ -35,7 +39,19 @@ public class MainActivity extends ActionBarActivity {
 		// Creating The Toolbar and setting it as the Toolbar for the activity
 
 		toolbar = (Toolbar) findViewById(R.id.tool_bar);
+		//getSupportActionBar().setDisplayShowHomeEnabled(true);
+		//getSupportActionBar().setIcon(R.drawable.ic_action);
+		//toolbar.setic();
+		toolbar.setNavigationIcon(R.drawable.ic_launcher);
+		TextView title = (TextView)findViewById(R.id.title);
+		
+		Typeface type = Typeface.createFromAsset(getAssets(),"Lato-Regular.ttf"); 
+		Spanned text = Html.fromHtml(" <b>bold</b> and <i>italic</i> ");
+		title.setTypeface(type);
+		title.setText(text);
+		toolbar.setTitle("amin");
 		setSupportActionBar(toolbar);
+		//toolbar.settext
 
 		// Creating The ViewPagerAdapter and Passing Fragment Manager, Titles
 		// fot the Tabs and Number Of Tabs.
@@ -62,7 +78,7 @@ public class MainActivity extends ActionBarActivity {
 		tabs.setSelectedIndicatorColors(getResources().getColor(
 				R.color.indicator));
 		
-		tabs.setDividerColors(getResources().getColor(R.color.white));
+		tabs.setDividerColors(getResources().getColor(R.color.Dividercolor));
 		tabs.setBackgroundColor(getResources().getColor(R.color.aminbackground));
 	//	tabs.setDividerColors(getResources().getColor(
 		//		R.color.Dividercolor));
@@ -87,8 +103,8 @@ public class MainActivity extends ActionBarActivity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-	//	getMenuInflater().inflate(R.menu.menu_main, menu);
-		return false;
+		getMenuInflater().inflate(R.menu.menu_main, menu);
+		return true;
 	}
 
 	@Override
