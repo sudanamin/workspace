@@ -3,6 +3,10 @@ package com.example.sudan;
 
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
+
+import com.example.sudan.adapters.ViewPagerAdapter;
+import com.example.sudan.util.SlidingTabLayout;
+
 import android.annotation.SuppressLint;
 import android.graphics.Color;
 import android.graphics.Typeface;

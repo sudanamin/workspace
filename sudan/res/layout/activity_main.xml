@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         />
 
-    <com.example.sudan.SlidingTabLayout
+    <com.example.sudan.util.SlidingTabLayout
         android:id="@+id/tabs"
         android:layout_width="match_parent"
        

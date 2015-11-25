@@ -1,7 +1,9 @@
 package com.example.sudan;
 
-import com.example.sudan.FullScreenImageAdapter;
-import com.example.sudan.Utils;
+import com.example.sudan.adapters.FullScreenImageAdapter;
+
+//import com.example.sudan.FullScreenImageAdapter;
+//import com.example.sudan.Utils;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,7 +12,7 @@ import android.util.Log;
 
 public class FullScreenViewActivity extends Activity{
 
-	private Utils utils;
+	//private Utils utils;
 	private FullScreenImageAdapter adapter;
 	private ViewPager viewPager;
 
@@ -21,7 +23,7 @@ public class FullScreenViewActivity extends Activity{
 
 		viewPager = (ViewPager) findViewById(R.id.pager);
 
-		utils = new Utils(getApplicationContext());
+		//utils = new Utils(getApplicationContext());
 
 		Intent i = getIntent();
 		String  iSelectedItem = i.getStringExtra("position");

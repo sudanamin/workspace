@@ -25,7 +25,6 @@
 <fullyQualifiedTypeName name="android.R.layout"/>
 <fullyQualifiedTypeName name="android.R.id"/>
 <fullyQualifiedTypeName name="de.hdodenhof.circleimageview.sample.R.color"/>
-<fullyQualifiedTypeName name="android.R"/>
 <fullyQualifiedTypeName name="android.graphics.Paint"/>
 <fullyQualifiedTypeName name="android.graphics.Color"/>
 <fullyQualifiedTypeName name="android.util.Log"/>
@@ -34,4 +33,21 @@
 <fullyQualifiedTypeName name="android.graphics.Typeface"/>
 <fullyQualifiedTypeName name="android.text.Spanned"/>
 <fullyQualifiedTypeName name="android.text.Html"/>
+<fullyQualifiedTypeName name="com.example.sudan.SquareImageView"/>
+<fullyQualifiedTypeName name="com.example.sudan.products"/>
+<fullyQualifiedTypeName name="com.example.sudan.details"/>
+<fullyQualifiedTypeName name="com.example.sudan.view.CircleImageView"/>
+<fullyQualifiedTypeName name="com.example.sudan.adapters.FullScreenImageAdapter"/>
+<fullyQualifiedTypeName name="com.example.sudan.adapters.ViewPagerAdapter"/>
+<fullyQualifiedTypeName name="com.example.sudan.util.SlidingTabLayout"/>
+<fullyQualifiedTypeName name="com.example.sudan.view.TouchImageView"/>
+<fullyQualifiedTypeName name="com.example.sudan.view.SquareImageView"/>
+<fullyQualifiedTypeName name="com.example.sudan.view.LazyListview"/>
+<fullyQualifiedTypeName name="com.example.sudan.tabs.Tab2"/>
+<fullyQualifiedTypeName name="com.example.sudan.tabs.Tab3"/>
+<fullyQualifiedTypeName name="com.example.sudan.tabs.Tab4"/>
+<fullyQualifiedTypeName name="com.example.sudan.adapters.LazyAdapter"/>
+<fullyQualifiedTypeName name="com.example.sudan.util.GetData"/>
+<fullyQualifiedTypeName name="android.R"/>
+<fullyQualifiedTypeName name="com.example.sudan.R"/>
 </qualifiedTypeNameHistroy>

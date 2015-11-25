@@ -10,6 +10,8 @@ import org.json.JSONObject;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.target.BitmapImageViewTarget;
 //import com.mikhaellopez.circularimageview.CircularImageView;
+import com.example.sudan.adapters.LazyAdapter;
+import com.example.sudan.view.CircleImageView;
 
 import android.view.View.OnClickListener;
 import android.os.AsyncTask;

@@ -3,9 +3,14 @@ package com.example.sudan.adapters;
 
 
 import com.bumptech.glide.Glide;
+import com.example.sudan.R;
 //import com.squareup.picasso.Picasso;
 //import com.rogcg.gridviewexample.R;
 //import com.rogcg.gridviewexample.MainActivity.MyAdapter.Item;
+//import com.example.sudan.SquareImageView;
+import com.example.sudan.details;
+import com.example.sudan.products;
+import com.example.sudan.view.SquareImageView;
 
 import android.app.Activity;
 import android.content.Context;
@@ -63,7 +68,7 @@ public class LazyAdapter extends BaseAdapter {
         
         ImageView picture;
         TextView name;
-        if(convertView==null)
+        if(convertView == null)
             vi = inflater.inflate(R.layout.gridview_item, null);
  
       /*  TextView name=(TextView)vi.findViewById(R.id.title);
@@ -75,8 +80,8 @@ public class LazyAdapter extends BaseAdapter {
         
        /* ProgressBar pb = (ProgressBar)vi.findViewById(R.id.progress);
         imageLoader.DisplayImage(data[position], image,pb);*/
-        
-        picture = (SquareImageView)vi.findViewById(R.id.picture);
+
+         picture = (SquareImageView)vi.findViewById(R.id.picture);
         name = (TextView)vi.findViewById(R.id.text);
 
       
