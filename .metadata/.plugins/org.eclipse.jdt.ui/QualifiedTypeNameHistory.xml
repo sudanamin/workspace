@@ -48,6 +48,8 @@
 <fullyQualifiedTypeName name="com.example.sudan.tabs.Tab4"/>
 <fullyQualifiedTypeName name="com.example.sudan.adapters.LazyAdapter"/>
 <fullyQualifiedTypeName name="com.example.sudan.util.GetData"/>
+<fullyQualifiedTypeName name="com.example.sudan.gcm.WakeLocker"/>
 <fullyQualifiedTypeName name="android.R"/>
+<fullyQualifiedTypeName name="com.example.sudan.MainActivity"/>
 <fullyQualifiedTypeName name="com.example.sudan.R"/>
 </qualifiedTypeNameHistroy>

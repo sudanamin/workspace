@@ -7,5 +7,7 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="gen"/>
 	<classpathentry kind="lib" path="C:/Users/Aminov/Desktop/picasso-2.5.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Aminov/android-sdks/extras/google/google_play_services/libproject/google-play-services_lib/libs/google-play-services.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Aminov/android-sdks/extras/google/gcm/samples/gcm-demo-client/libs/gcm.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>
