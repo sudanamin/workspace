@@ -68,6 +68,7 @@ public class details extends Activity {
 	static JSONObject jObj = null;
 	static String json = "";
 	private static String jsonurl = "http://sudan.besaba.com/detailjsontest.php?id=";
+	private static String also_url = "http://sudan.besaba.com/productjsontest.php?id=";
 	// private static String jsonurl = "http://sudan.besaba.com/images.txt";
 	LazyAdapter adapter;
 	GridView gridView;
@@ -123,10 +124,10 @@ public class details extends Activity {
 		GetdetailsData getdetailsdata = new GetdetailsData(this);
 		also alsolike = new also(this);
 		// new GetData().execute(jsonurl);
-
+        int brand_id = com.example.sudan.products.current_brand_id;
 		// getdata.execute(jsonurl);
 		getdetailsdata.execute(jsonurl + "" + product_id);
-		alsolike.execute(jsonurl + "" + product_id);
+		alsolike.execute(also_url + "" + brand_id);
 
 	}
 
@@ -374,7 +375,8 @@ public class details extends Activity {
 
 			try {
 				// Getting Array of Contacts
-				images = result.getJSONArray(TAG_IMAGES);
+				String tag_image = "products";
+				images = result.getJSONArray(tag_image);
 				names = new String[images.length()];
 				urls = new String[images.length()];
 

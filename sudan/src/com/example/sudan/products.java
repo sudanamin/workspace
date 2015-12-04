@@ -45,7 +45,7 @@ public class products extends Activity {
 
 
 //public class LazyListview extends Fragment {
-	
+	public static int current_brand_id=8;
 	static InputStream is = null;
 	static JSONObject jObj = null;
 	static String json = "";
@@ -84,7 +84,7 @@ public class products extends Activity {
 		
 		Log.e("brand id is ", ""+brand_id);
         
-     
+         current_brand_id = brand_id;
         GetData getdata = new GetData(gridView, adapter , this,TAG_IMAGES);
        // new GetData().execute(jsonurl);
         getdata.execute(jsonurl+""+brand_id);

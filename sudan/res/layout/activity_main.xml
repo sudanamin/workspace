@@ -11,6 +11,9 @@
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         />
+    
+    
+   
 
     <com.example.sudan.util.SlidingTabLayout
         android:id="@+id/tabs"
