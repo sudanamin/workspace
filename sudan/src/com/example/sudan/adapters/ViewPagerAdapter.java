@@ -35,13 +35,13 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
 	// This method return the fragment for the every position in the View Pager
 	@Override
 	public Fragment getItem(int position) {
-		switch (position) {
-		case 0: // if the position is 0 we are returning the First tab
-		{
+	//	switch (position) {
+//		case 0: // if the position is 0 we are returning the First tab
+	//	{
 			LazyListview lazy = newInstance(Titles[position]);
 			
 			return lazy;
-		}
+/*		}
 		case 1: // As we are having 2 tabs if the position is now 0 it must be 1
 				// so we are returning second tab
 		{
@@ -59,7 +59,7 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
 
 		default:
 			return null;
-		}
+		}*/
 	}
 
 	// This method return the titles for the Tabs in the Tab Strip

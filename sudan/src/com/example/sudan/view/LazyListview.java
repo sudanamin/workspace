@@ -67,7 +67,8 @@ public class LazyListview extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v =inflater.inflate(R.layout.activity_lazy_listview,container,false);
        
-        getArguments().getInt("someInt", 0);
+        String title = getArguments().getString("title", "brand");
+        System.out.println("title from fragment " +title);
         gridView = (GridView)v.findViewById(R.id.gridview);
         String jsonName = "brands";
         
